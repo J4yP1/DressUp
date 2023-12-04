@@ -134,7 +134,7 @@ const Login = () => {
           </div>
           <footer className="mt-20 pt-4 text-sm text-body-secondary border-t d-flex text-center">
                   IPVC ESTG - Cristiano Fonseca - João Cerqueira &copy; - 2023-2024
-              </footer>
+          </footer>
         </div>
       </body>
     );
