@@ -6,6 +6,7 @@ const Dashboard = () => {
     const { data: session } = useSession();
     console.log(session?.user?.email);
   return (
+    
     <div>
         <h1>Dashboard</h1>
         <p>Hi {session?.user?.name}</p>
