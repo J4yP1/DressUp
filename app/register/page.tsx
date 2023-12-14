@@ -46,7 +46,7 @@ const Register = () => {
     </div>  
       <div className="min-h-screen pt-20">
         <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white rounded-xl mx-auto shadow-lg overflow-hidden">
+          <div className=" flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white rounded-xl mx-auto shadow-lg overflow-hidden">
             <div className="w-full flex flex-col items-center justify-center">
               <Image className='p-4 border-r'
               src="/images/roupa.jpg"

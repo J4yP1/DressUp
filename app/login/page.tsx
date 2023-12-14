@@ -41,7 +41,7 @@ const Login = () => {
           />
         </div>
         <div className="flex min-h-full flex-1 flex-col  px-6 py-12 lg:px-8">
-          <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+          <div className="sm:mx-auto sm:w-full sm:max-w-sm ">
           <Image className='pl-20 mt-5'
               src="/images/logoPreto1.png"
               alt="DressUp"
