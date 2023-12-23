@@ -47,7 +47,7 @@ const HeroSection = () => {
         >
           <div className="border-l">
             <Image
-              src="/images/teste3_fs.png"
+              src="/images/teste4_fs.png"
               alt="hero image"
               className=""
               width={500}

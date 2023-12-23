@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Navbar from '../../components/Navbar'
 import 'tailwindcss/tailwind.css';
+import Modal from "@/components/Modal";
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
@@ -106,9 +107,12 @@ function classNames(...classes: string[]) {
 }
 
 export default function Filters() {
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
 
   return (
+    <Fragment>
     <div>
       <div style={{
         zIndex:-1,
@@ -230,6 +234,13 @@ export default function Filters() {
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">Armário Pessoal</h1>
 
             <div className="flex items-center">
+              <div className="group inline-flex text-sm font-medium text-gray-700 hover:text-gray-900 pr-12">
+                <button className="w-full rounded border hover:text-gray-500 py-2 px-2 text-center" onClick={() => setShowModal(true)}>
+                  <h1>
+                    Adicionar Peça de Roupa +
+                  </h1>
+                </button>
+              </div>
               <Menu as="div" className="relative inline-block text-left">
                 <div>
                   <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
@@ -386,5 +397,96 @@ export default function Filters() {
         </main>
       </div>
     </div>
+    <Modal isVisible ={showModal} onClose={() => setShowModal(false)}>
+      <div className="p-6">
+        <h3 className="text-xl font-semibold text-gray-900 mb-5">
+          Introduza as Informações!
+        </h3>
+        <form>
+              <div>
+                <h3>Categoria:</h3>
+                <select id="country" name="country" autoComplete="country-name" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-500 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-s">
+                    <option>T-shit</option>
+                    <option>T-shit de Manga Cava</option>
+                    <option>Casaco</option>
+                    <option>Calças</option>
+                    <option>Calções</option>
+                    <option>SweatShirt</option>
+                    <option>SweatShirt com Capuz</option>
+                    <option>Sobretudo</option>
+                    <option>Colete</option>
+                    <option>Acessórios</option>
+                    <option>Calçado</option>
+                    <option>Outro..</option>
+                  </select> 
+                </div>
+                <div className="mt-3">
+                <h3>Marca:</h3>
+                <input
+                  id="Surname"
+                  placeholder='Surname'
+                  name="Surname"
+                  type="first-name"
+                  autoComplete="first-name"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                />
+                </div>
+                <div className="mt-3">
+                  <h3>Cor:</h3>
+                  <select id="country" name="country" autoComplete="country-name" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-500 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-s">
+                    <option>Branco</option>
+                    <option>Preto</option>
+                    <option>Beje</option>
+                    <option>Castanho</option>
+                    <option>Rosa</option>
+                    <option>Azul</option>
+                    <option>Vermelho</option>
+                    <option>Amarelo</option>
+                    <option>Roxo</option>
+                    <option>Verde</option>
+                    <option>Outro..</option>
+                  </select>  
+                </div>
+                <div className="mt-3">
+                  <h3>Tamanho:</h3>
+                  <select id="country" name="country" autoComplete="country-name" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-500 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-s">
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                  </select>  
+                </div>
+                <div className="mt-3">
+                  <h3>Tecido:</h3>
+                  <select id="country" name="country" autoComplete="country-name" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-500 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-s">
+                    <option>Seda</option>
+                    <option>Linho</option>
+                    <option>Ganga</option>
+                    <option>Malha</option>
+                    <option>Poliester</option>
+                    <option>Lã</option>
+                    <option>Algodão</option>
+                    <option>Impermeável</option>
+                    <option>Outro..</option>
+                  </select>  
+                </div>
+                <div className="mt-3">
+                  <h3>Estação:</h3>
+                  <select id="country" name="country" autoComplete="country-name" className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-500 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-s">
+                    <option>Inverno</option>
+                    <option>Verão</option>
+                    <option>Outono</option>
+                    <option>Primavera</option>
+                  </select>  
+                </div>
+                <div className="mt-3">
+                  <button  type="submit" className="w-full rounded bg-purple-500 hover:bg-purple-400 py-3 text-center text-white">Registrar</button>
+                </div>
+              </form>
+      </div>  
+    </Modal>
+    </Fragment>
   )
 }

@@ -59,7 +59,7 @@ const Home = () => {
           <div className="relative mt-16 pl-12 lg:mt-12">
             <img
               className=""
-              src="/images/roupa.jpg"
+              src="/images/roupa3_fs.png"
               alt="App screenshot"
               width={400}
               height={400}
