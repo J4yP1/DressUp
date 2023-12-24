@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className= "pt-20 mx-20">
+    <section className="pt-20 mx-20">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -36,7 +36,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text- border-t border-b text-sm pt-5 pb-5 px-20">
-          O DressUp, simplifica a escolha de roupas com sugestões diárias personalizáveis. Permite o gerenciamento de peças, cuidados com as roupas e promove a sustentabilidade ao facilitar a doação ou reciclagem. Mantém um registro detalhado das datas de uso e histórico de conjuntos, oferecendo uma gestão eficaz. Para viagens, possui uma função de planejamento de roupas baseada na previsão do tempo e localização.
+            O DressUp, simplifica a escolha de roupas com sugestões diárias personalizáveis. Permite o gerenciamento de peças, cuidados com as roupas e promove a sustentabilidade ao facilitar a doação ou reciclagem. Mantém um registro detalhado das datas de uso e histórico de conjuntos, oferecendo uma gestão eficaz. Para viagens, possui uma função de planejamento de roupas baseada na previsão do tempo e localização.
           </p>
         </motion.div>
         <motion.div

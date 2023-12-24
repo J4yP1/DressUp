@@ -5,21 +5,21 @@ import Image from "next/image";
 const Home = () => {
   return (
     <main>
-     <div> 
-     <div style={{
-        zIndex:-1,
-        position:'fixed',
-        width:"100vw",
-        height:"100vh"
-      }}>
-        <Image
-          src="/images/background.jpg"
-          alt="DressUp"
-          layout="fill"
-          objectFit="cover"
-        />
+      <div>
+        <div style={{
+          zIndex: -1,
+          position: 'fixed',
+          width: "100vw",
+          height: "100vh"
+        }}>
+          <Image
+            src="/images/background.jpg"
+            alt="DressUp"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </div>
-      </div>  
       <div className="mx-auto max-w-7xl sm:px-8 sm:py-24 lg:px-8">
         <div className="relative isolate overflow-hidden bg-white px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
           <svg
@@ -42,7 +42,7 @@ const Home = () => {
               O Armário Inteligente!
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-700">
-              Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.
+              Desenvolvido com o intuíto de poupar cada segundo do teu dia!
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a
@@ -67,7 +67,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-  </main>
+    </main>
   );
 };
 
